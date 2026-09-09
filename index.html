@@ -145,6 +145,61 @@ html.dark .motivational-tip-glow{background:radial-gradient(circle,rgba(96,165,2
 @media(max-width:560px){.motivational-tip-inner{padding:20px 18px 17px}.motivational-tip-top{padding-left:12px}.motivational-tip-footer{align-items:stretch;flex-direction:column}.motivational-tip-close{width:100%}}
 @media(prefers-reduced-motion:reduce){.motivational-tip-backdrop,.motivational-tip{transition-duration:.01ms!important}.motivational-tip-backdrop.show .motivational-tip{animation:none}}
 </style>
+<style id="modern-visual-refresh">
+/* Modern supermarket visual language — presentation only */
+:root{
+  --primary:#0f766e;
+  --primary2:#115e59;
+  --accent:#0ea5e9;
+  --success:#16a34a;
+  --warning:#d97706;
+  --danger:#dc2626;
+  --brand-grad:linear-gradient(135deg,#0f766e 0%,#0ea5e9 100%);
+  --soft-primary:rgba(15,118,110,.10);
+  --soft-accent:rgba(14,165,233,.10);
+}
+html.dark{
+  --primary:#2dd4bf;
+  --primary2:#14b8a6;
+  --accent:#38bdf8;
+  --brand-grad:linear-gradient(135deg,#115e59 0%,#0369a1 100%);
+  --soft-primary:rgba(45,212,191,.12);
+  --soft-accent:rgba(56,189,248,.12);
+}
+body{font-family:"Segoe UI",Tahoma,Arial,sans-serif;letter-spacing:.01em}
+.sidebar{background:linear-gradient(180deg,var(--surface),var(--surface2));box-shadow:8px 0 28px rgba(15,23,42,.035)}
+.brand .logo{background:var(--brand-grad);border-radius:15px;box-shadow:0 8px 18px rgba(15,118,110,.18)}
+.nav button{position:relative;border:1px solid transparent;transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease}
+.nav button:hover{background:var(--soft-primary);border-color:rgba(15,118,110,.10);transform:translateX(-2px)}
+.nav button.active{background:linear-gradient(90deg,var(--soft-primary),transparent);border-color:rgba(15,118,110,.12);color:var(--primary)}
+.nav button.active::before{content:"";position:absolute;right:0;top:9px;bottom:9px;width:3px;border-radius:6px;background:var(--primary)}
+.ui-icon{width:19px;height:19px;flex-basis:19px}
+.ui-icon svg{width:19px;height:19px;stroke-width:1.75;transition:transform .18s ease,stroke-width .18s ease}
+.nav button:hover .ui-icon svg,.btn:hover .ui-icon svg{transform:scale(1.06);stroke-width:1.95}
+.nav-icon{width:21px;height:21px;flex-basis:21px}
+.nav-icon svg{width:21px;height:21px}
+.btn{border-radius:12px;box-shadow:0 1px 2px rgba(15,23,42,.03)}
+.btn.primary{background:linear-gradient(135deg,var(--primary),var(--primary2));border-color:var(--primary)}
+.btn.primary:hover{filter:saturate(1.04);box-shadow:0 8px 20px rgba(15,118,110,.16)}
+.btn.success{background:linear-gradient(135deg,#16a34a,#15803d);border-color:#16a34a}
+.btn.warning{background:linear-gradient(135deg,#d97706,#b45309);border-color:#d97706}
+.btn.danger{background:linear-gradient(135deg,#dc2626,#b91c1c);border-color:#dc2626}
+.topbar{background:color-mix(in srgb,var(--surface) 88%,transparent);box-shadow:0 4px 18px rgba(15,23,42,.035)}
+.page-title{letter-spacing:-.02em}
+.card{box-shadow:var(--shadow-sm),0 1px 0 rgba(255,255,255,.6) inset}
+.stat .icon{background:linear-gradient(145deg,var(--soft-primary),var(--surface3));color:var(--primary);border:1px solid rgba(15,118,110,.08)}
+.hero{background:linear-gradient(135deg,#0f766e 0%,#0ea5e9 100%);box-shadow:0 16px 34px rgba(14,116,144,.16)}
+.product-card .product-mark{background:linear-gradient(145deg,var(--soft-primary),var(--soft-accent));color:var(--primary);border:1px solid rgba(15,118,110,.08)}
+.product-card .product-mark svg{stroke-width:1.7}
+.alert-row .ui-icon{color:var(--warning)}
+.table th{font-weight:800;letter-spacing:.02em}
+.input:focus,.select:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(15,118,110,.10)}
+.badge.info{background:#e0f2fe;color:#075985}
+html.dark body .badge.info{background:#12324a;color:#7dd3fc}
+.toast{box-shadow:0 12px 30px rgba(15,23,42,.18);border:1px solid rgba(255,255,255,.08)}
+.app-footer{background:linear-gradient(180deg,var(--surface),var(--surface2));border-top:1px solid var(--border)}
+.footer-pill{border-color:rgba(15,118,110,.12)!important;background:var(--soft-primary)!important;color:var(--primary)!important}
+</style>
 </head>
 <body>
 <div class="app">
